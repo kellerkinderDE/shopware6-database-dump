@@ -1,5 +1,5 @@
 # shopware6-database-dump
-Dump a Shopware 6 database for backup or local environments (and filter GDPR data).
+Dump a Shopware 6 database for your local environments (and filter GDPR data).
 
 ## Disclaimer
 We support a standard Shopware 6 database along with the official Klarna, PAYONE and Unzer plugins.

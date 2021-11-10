@@ -7,7 +7,7 @@ We support a standard Shopware 6 database along with the official Klarna, PAYONE
 Please understand, that we can not give any guarantees for GDPR compliance of the resulting dump.
 
 ## Requirements
-You need `gzip` and `mysqldump` installed and available via your `PATH`.
+You need to have `gzip` and `mysqldump` installed and available via your `PATH`.
 MySQL will be accessed via IP, sockets are not supported yet.
 
 ## Usage

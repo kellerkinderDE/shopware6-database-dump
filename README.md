@@ -1,8 +1,10 @@
 # shopware6-database-dump
 Dump a Shopware 6 database for backup or local environments (and filter GDPR data).
 
-If you're using the official Klarna, PAYONE or Unzer plugins, all relevant GDPR data will be filtered for their tables
-as well.
+## Disclaimer
+We support a standard Shopware 6 database along with the official Klarna, PAYONE and Unzer plugins.
+
+Please understand, that we can not give any guarantees for GDPR compliance of the resulting dump.
 
 ## Requirements
 You need `gzip` and `mysqldump` installed and available via your `PATH`.

@@ -223,17 +223,15 @@ _dump() {
   _IGNORED_TABLES+=('product_keyword_dictionary')
   _IGNORED_TABLES+=('product_search_keyword')
 
-  _IGNORED_TABLES_STRING=""
+  _IGNORED_TABLES_ARGUMENTS=()
   for _TABLE in "${_IGNORED_TABLES[@]}"
   do :
-     _IGNORED_TABLES_STRING+=" --ignore-table='${_DATABASE}.${_TABLE}'"
+     _IGNORED_TABLES_ARGUMENTS+=("--ignore-table='${_DATABASE}.${_TABLE}'")
   done
 
   printf ">> Creating data dump...\\n"
 
-  # We need to use eval because Bash passes _IGNORED_TABLES_STRING as a single argument (somehow) to mysqldump otherwise
-  CMD="mysqldump --column-statistics=0 --no-create-info --skip-triggers --quick -C --hex-blob --single-transaction --host=${_HOST} --port=${_PORT} --user=${_USER} -p ${_IGNORED_TABLES_STRING} ${_DATABASE}"
-  eval $CMD \
+  mysqldump --column-statistics=0 --no-create-info --skip-triggers --quick -C --hex-blob --single-transaction --host=${_HOST} --port=${_PORT} --user=${_USER} -p "${_IGNORED_TABLES_ARGUMENTS[@]}" ${_DATABASE} \
     | LANG=C LC_CTYPE=C LC_ALL=C sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' \
     >> ${_FILENAME}
 

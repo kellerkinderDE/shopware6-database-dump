@@ -226,7 +226,7 @@ _dump() {
   _IGNORED_TABLES_ARGUMENTS=()
   for _TABLE in "${_IGNORED_TABLES[@]}"
   do :
-     _IGNORED_TABLES_ARGUMENTS+=("--ignore-table='${_DATABASE}.${_TABLE}'")
+     _IGNORED_TABLES_ARGUMENTS+=("--ignore-table=${_DATABASE}.${_TABLE}")
   done
 
   printf ">> Creating data dump...\\n"

@@ -68,7 +68,7 @@ Dumps a Shopware 6 database with a bit of cleanup and a GDPR mode ignoring more 
 
 Usage:
   ${_ME} [filename.sql] --database db_name --user username [--host 127.0.0.1] [--port 3306] [--gdpr]
-  ${_ME} [filename.sql] -d db_name -u username [-h 127.0.0.1] [-p 3306] [--gdpr]
+  ${_ME} [filename.sql] -d db_name -u username [-H 127.0.0.1] [-p 3306] [--gdpr]
   ${_ME} -h | --help
 
 Arguments:
@@ -78,7 +78,7 @@ Options:
   -h --help      Display this help information.
   -d --database  Set database name
   -u --user      Set database user name
-  -h --host      Set hostname for database server (default: 127.0.0.1)
+  -H --host      Set hostname for database server (default: 127.0.0.1)
   -p --port      Set database server port (default: 3306)
   --gdpr         Enable GDPR data filtering
 HEREDOC
@@ -136,7 +136,7 @@ do
       _USER="$(__get_option_value "${__arg}" "${__val:-}")"
       shift
       ;;
-    -h|--host)
+    -H|--host)
       _HOST="$(__get_option_value "${__arg}" "${__val:-}")"
       shift
       ;;

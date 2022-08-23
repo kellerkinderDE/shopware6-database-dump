@@ -18,14 +18,14 @@ Dumps a Shopware 6 database with a bit of cleanup and a GDPR mode ignoring more 
 
 Usage:
   shopware6-database-dump.sh --database db_name --user username [--host 127.0.0.1] [--port 3306] [--gdpr]
-  shopware6-database-dump.sh -d db_name -u username [-h 127.0.0.1] [-p 3306] [--gdpr]
+  shopware6-database-dump.sh -d db_name -u username [-H 127.0.0.1] [-p 3306] [--gdpr]
   shopware6-database-dump.sh -h | --help
 
 Options:
   -h --help      Display this help information.
   -d --database  Set database name
   -u --user      Set database user name
-  -h --host      Set hostname for database server (default: 127.0.0.1)
+  -H --host      Set hostname for database server (default: 127.0.0.1)
   -p --port      Set database server port (default: 3306)
   --gdpr         Enable GDPR data filtering
 ```

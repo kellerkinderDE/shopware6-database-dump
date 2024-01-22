@@ -222,7 +222,7 @@ _dump() {
       unzer_payment_payment_device
       unzer_payment_transfer_info
       crefo_pay_transaction_refund_history
-      crefo_pay_transaction_capture_history      
+      crefo_pay_transaction_capture_history
     )
   fi
 

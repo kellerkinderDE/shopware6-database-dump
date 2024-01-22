@@ -170,7 +170,7 @@ _dump() {
     _COLUMN_STATISTICS="--column-statistics=0"
   fi
 
-  mysqldump ${_COLUMN_STATISTICS} --no-tablespaces --quick -C --hex-blob --single-transaction --no-data --host=${_HOST} --port=${_PORT} --user=${_USER} -p ${_DATABASE} | LANG=C LC_CTYPE=C LC_ALL=C sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' > ${_FILENAME}
+  mysqldump ${_COLUMN_STATISTICS} --no-tablespaces --quick -C --hex-blob --skip-triggers --single-transaction --no-data --host=${_HOST} --port=${_PORT} --user=${_USER} -p ${_DATABASE} | LANG=C LC_CTYPE=C LC_ALL=C sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' > ${_FILENAME}
 
   _IGNORED_TABLES=()
 

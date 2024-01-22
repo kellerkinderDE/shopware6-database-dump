@@ -202,7 +202,6 @@ _dump() {
       order_line_item
       order_tag
       order_transaction
-      product_export
       product_review
       promotion_persona_customer
       refresh_token
